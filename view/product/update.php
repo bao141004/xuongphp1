@@ -22,7 +22,7 @@
                 $hinh = "no photo";
             } 
             ?> 
-            
+
         <?php }?> 
    
     <form action="index.php?act=updatesp" class="row g-3 needs-validation mt-4" method="post" enctype="multipart/form-data" novalidate>
@@ -64,14 +64,16 @@
         </div>
     </div>
     <div class="col-md-5">
-        <label for="validationCustom04" class="form-label" name="id_category">Danh mục</label>
+        <label for="validationCustom04" class="form-label" >Danh mục</label>
         <select class="form-select" name="iddm" id="validationCustom04" required>
         <?php
             foreach ($listcategory as $value){
-                extract($value)
-        ?>
-            <option value="<?php echo $id_category ?>"><?php echo $name_category ?></option>
-        <?php
+                if($oneProduct['id_category']==$value['id_category']){
+                    echo'<option value="'.$value['id_category'].'" selected>'.$value['name_category'].'</option>';
+                }else{
+                    echo'<option value="'.$value['id_category'].'">'.$value['name_category'].'</option>';
+                }
+                    
             }
         ?>
         </select>

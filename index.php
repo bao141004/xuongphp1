@@ -87,6 +87,7 @@ session_start();
             case "updatesp":
                 if(isset($_POST['update'])){
                     $id = $_POST['id_product'];
+                    // $iddm=$_POST['id_category'];
                     $name_product = $_POST['name_product'];
                     $price = $_POST['price'];
                     $mota = $_POST['mota'];
