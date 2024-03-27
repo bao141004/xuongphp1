@@ -102,7 +102,16 @@
 <body>
     <div class="container">
         <div class="main-login", id="parent">
-        <form align="center" action="trangchu.php" class="needs-validation" method="POST" novalidate>
+        
+        <?php 
+        if(isset($_SESSION['name'])){
+            echo "HELLO" ." ".$_SESSION['name'];
+   ?>
+     <a class="btn btn-success mt-2" href="index.php?act=list">Danh Sách Sản Phẩm</a>
+      <a class="btn btn-success mt-2" href="index.php?act=listdm">Danh sách Danh Mục</a>
+      <a class="btn btn-danger mt-2" href="index.php?act=dangxuat">Đăng Xuất</a>
+      <?php }else{?>
+        <form align="center" action="index.php?act=dangnhap" class="needs-validation" method="POST" novalidate>
         <div class="login-screen">
             <div class="app-title">
                 <h1>Login</h1>
@@ -127,6 +136,8 @@
                 <input type="submit" value="Log in" name="dangnhap" class="btn btn-primary btn-large btn-block" >
         </div>
         </form>
+
+        <?php } ?>
         </div>
     </div>
 

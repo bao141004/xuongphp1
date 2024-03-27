@@ -52,7 +52,7 @@
         </tbody>
     </table>
     <a class="btn btn-success mt-2" href="index.php?act=add">Thêm mới</a>
-    <a class="btn btn-success mt-2" href="./trangchu.php">Về Trang Chủ</a>
+    <a class="btn btn-success mt-2" href="index.php?act=dangnhap">Về Trang Chủ</a>
     </div>
 </body>
 </html>

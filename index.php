@@ -1,12 +1,25 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <?php
+session_start();
     include "model/pdo.php"; 
     include "model/product.php";
     include "model/category.php";
     if (isset($_GET['act']) && ($_GET['act'] != "")){
         $act = $_GET['act'];
         switch($act){
+            case "dangnhap":
+                if(isset($_POST['dangnhap'])){
+                    $_SESSION['name'] = $_POST['name'];
+                    $_SESSION['matkhau'] = $_POST['matkhau'];
+                }
+                include "dangnhap.php";
+                break;
+            case "dangxuat":
+                session_destroy();
+                
+                echo "<meta http-equiv='refresh' content='0;url=dangnhap.php'>";
+                break;
             case "listdm":
                 $listcategory = listCategory();
                 include "view/category/list.php";
