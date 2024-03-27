@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th3 26, 2024 lúc 08:10 AM
+-- Thời gian đã tạo: Th3 27, 2024 lúc 03:37 PM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.2.4
 
@@ -39,7 +39,7 @@ CREATE TABLE `category` (
 INSERT INTO `category` (`id_category`, `name_category`) VALUES
 (1, 'Quần'),
 (2, 'Áo'),
-(9, 'hehe222');
+(9, 'hehe222233');
 
 -- --------------------------------------------------------
 
@@ -63,9 +63,9 @@ CREATE TABLE `product` (
 INSERT INTO `product` (`id_product`, `name_product`, `price`, `image`, `mota`, `id_category`) VALUES
 (2, 'Sản phẩm 1', 123456, 'Screenshot (1179).png', 've ri bíu ti phùn', 1),
 (3, 'Sản phẩm 2', 234123, 'Screenshot (1177).png', 've ri bíu ti phùn', 1),
-(16, 'gg222', 12334444, 'anh3.png', 'hihi', 1),
-(17, 'hhehehe2222', 3333, 'Screenshot (1178).png', 'đa', 1),
-(20, 'ss22', 123, 'Screenshot 2024-03-23 222127.png', 'ád', 1);
+(16, 'gg222', 12334444, 'anh3.png', 'hihi', 2),
+(17, 'hhehehe2222', 3333, 'Screenshot (1178).png', 'đa222', 9),
+(21, 'tét', 123, 'Screenshot 2024-03-26 140753.png', 'asdasdas', 1);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -92,13 +92,13 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT cho bảng `category`
 --
 ALTER TABLE `category`
-  MODIFY `id_category` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_category` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT cho bảng `product`
 --
 ALTER TABLE `product`
-  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
